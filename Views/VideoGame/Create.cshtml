@@ -1,0 +1,31 @@
+@model pract01.Models.VideoGame
+    ViewData["Title"] = "VideoGame";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <h1 class="display-4">Crear nuevo VideoJuego</h1>
+
+    <form asp-controller="VideoGame" asp-action="Create">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control form-control-sm" type="text" />
+
+        <label asp-for="Categoria" class="control-label"></label>
+        <input asp-for="Categoria" class="form-control" type="text" />
+
+        <label asp-for="Precio" class="control-label"></label>
+        <input asp-for="Precio" class="form-control" type="text"/>
+
+        <label asp-for="Descuento" class="control-label"></label>
+        <input asp-for="Descuento" class="form-control" type="text"/>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Registrar</button> 
+        </div>              
+    </form>
+    <h1>@ViewData["Message"]</h1>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
